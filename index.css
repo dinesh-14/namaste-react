@@ -1,3 +1,40 @@
-#heading {
-    color:red
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.logo {
+  width: 100px;
+}
+
+.nav-items > ul {
+  display: flex;
+  font-size: 14px;
+  list-style: none;
+}
+
+.nav-items > ul > li {
+  padding: 10px;
+  margin: 10px;
+}
+
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.res-card {
+  margin: 2px;
+  padding: 5px;
+  width: 190px;
+  /* height: 300px; */
+  border: 1px solid black;
+}
+
+.res-logo {
+  width: 100%;
+}
+.search {
+  padding: 10px;
 }
