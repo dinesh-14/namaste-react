@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import RestaurantCard from "./Restaurant";
+import RestaurantCard, { withPromotedLabel } from "./Restaurant";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 
@@ -31,10 +31,10 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
 
   const onlineStatus = useOnlineStatus();
-  console.log("onlineStatus =>", onlineStatus);
   if (onlineStatus === false) {
     return <div> You are offline!</div>;
   }
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
   return (
     <div className="body">
@@ -49,7 +49,11 @@ const Body = () => {
         {filteredRestaurants.map((rest) => {
           return (
             <Link to={"/restaurants/" + rest.info.id} key={rest.info.id}>
-              <RestaurantCard resData={rest} />;
+              {rest.info.aggregatedDiscountInfoV3.header ? (
+                <RestaurantCardPromoted resData={rest} header={rest.info.aggregatedDiscountInfoV3.header} />
+              ) : (
+                <RestaurantCard resData={rest} />
+              )}
             </Link>
           );
         })}
