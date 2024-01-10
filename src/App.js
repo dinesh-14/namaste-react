@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -8,19 +8,35 @@ import Error from "./components/Error";
 import ContactUs from "./components/ContactUs";
 import Cart from "./components/Cart";
 import RestaurantMenu from "./components/RestaurantMenu";
-// import Grocery from "./components/Grocery";
-
-// React.createElement => Object => HTMLElement(render)
-// React element
+import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 const Grocery = lazy(() => import("./components/Grocery"));
 
 const AppLayout = () => {
+  // authentication
+  const [userName, setUsername] = useState();
+  useEffect(() => {
+    const data = { name: "Dinesh" };
+    setUsername(data.name);
+  }, []);
+
   return (
-    <div className="app">
-      <Header />
-      <Outlet />
-    </div>
+    // 1 way binding using setUsername
+    <Provider store={appStore}>
+      <UserContext.Provider value={{ userName, setUsername }}>
+        <div className="app">
+          <UserContext.Consumer>
+            {({ userName }) => {
+              return <h1>{userName}</h1>;
+            }}
+          </UserContext.Consumer>
+          <Header />
+          <Outlet />
+        </div>
+      </UserContext.Provider>
+    </Provider>
   );
 };
 
