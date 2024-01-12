@@ -22,5 +22,9 @@
 - Configiure parcelrc file to disable default babel transpilation in order to make babel for jest work which is added in babel.conifig.js file
 
 - jest configuration using npx jest --init
-        use jsDom which is an environment to run test cases
+  use jsDom which is an environment to run test cases
 - install jsdom library
+- install @babel/preset-react - To give JSX support while writing test cases
+- install @testing-library/jest-dom for  .toBeInTheDocument type functions while writing test cases
+- add in babel config file
+- 
