@@ -1,0 +1,78 @@
+{
+  "info": {
+    "id": "289338",
+    "name": "BOX8 - Desi Meals",
+    "cloudinaryImageId": "69a061b7e0f951cef2b4947946f94ec6",
+    "locality": "Zeal College Road",
+    "areaName": "Narhe",
+    "costForTwo": "₹250 for two",
+    "cuisines": ["North Indian", "Biryani", "Thalis", "Home Food"],
+    "avgRating": 4.6,
+    "parentId": "10655",
+    "avgRatingString": "4.6",
+    "totalRatingsString": "1K+",
+    "sla": {
+      "deliveryTime": 16,
+      "lastMileTravel": 3.9,
+      "serviceability": "SERVICEABLE",
+      "slaString": "11-21 mins",
+      "lastMileTravelString": "3.9 km",
+      "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+      "nextCloseTime": "2024-01-15 02:00:00",
+      "opened": true
+    },
+    "badges": {
+      "textExtendedBadges": [
+        {
+          "iconId": "guiltfree/GF_Logo_android_3x",
+          "shortDescription": "options available",
+          "fontColor": "#7E808C"
+        }
+      ]
+    },
+    "isOpen": true,
+    "type": "F",
+    "badgesV2": {
+      "entityBadges": {
+        "imageBased": {},
+        "textBased": {},
+        "textExtendedBadges": {
+          "badgeObject": [
+            {
+              "attributes": {
+                "description": "",
+                "fontColor": "#7E808C",
+                "iconId": "guiltfree/GF_Logo_android_3x",
+                "shortDescription": "options available"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "aggregatedDiscountInfoV3": {
+      "header": "₹120 OFF",
+      "subHeader": "ABOVE ₹199",
+      "discountTag": "FLAT DEAL"
+    },
+    "orderabilityCommunication": {
+      "title": {},
+      "subTitle": {},
+      "message": {},
+      "customIcon": {}
+    },
+    "differentiatedUi": {
+      "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      "differentiatedUiMediaDetails": {
+        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+        "lottie": {},
+        "video": {}
+      }
+    },
+    "reviewsSummary": {},
+    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    "restaurantOfferPresentationInfo": {}
+  }
+}

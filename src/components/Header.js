@@ -37,6 +37,8 @@ const Header = () => {
           <li>
             <Link to={"/grocery"}>Grocery</Link>
           </li>
+          <li>{userName}</li>
+          <li>{onlineStatus ? "Logout" : "Login"}</li>
           {userName}
         </ul>
       </div>
